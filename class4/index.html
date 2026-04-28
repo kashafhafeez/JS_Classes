@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Class 4 - Forms & DOM</title>
+</head>
+
+<body>
+
+    <h2>Form Validation</h2>
+
+    <!-- ================= FORM ================= -->
+    <form id="form" onsubmit="validateForm()">
+
+        <input type="text" id="name" placeholder="Enter Name"><br><br>
+        <input type="text" id="email" placeholder="Enter Email"><br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="error" style="color:red;"></p>
+
+    <hr>
+
+    <!-- ================= LIST ================= -->
+    <h2>List Add / Remove</h2>
+
+    <ul id="list">
+        <li>Item 1</li>
+    </ul>
+
+    <button onclick="addItem()">Add Item</button>
+    <button onclick="removeItem()">Remove Item</button>
+
+    <hr>
+
+    <!-- ================= TODO APP ================= -->
+    <h2>Todo App</h2>
+
+    <input type="text" id="todoInput" placeholder="Enter task">
+    <button onclick="addTodo()">Add</button>
+
+    <ul id="todoList"></ul>
+
+    <hr>
+
+    <!-- ================= SCRIPT ================= -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
