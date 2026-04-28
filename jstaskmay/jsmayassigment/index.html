@@ -1,0 +1,194 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .section {
+      display: none;
+      padding: 20px;
+    }
+    .active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a onclick="show('home')">Home</a>
+      <a onclick="show('about')">About</a>
+      <a onclick="show('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <div id="home" class="section active">
+    <h2>Welcome to Home Page</h2>
+    <p>Yeh Home page ka content hai.</p>
+  </div>
+
+  <div id="about" class="section">
+    <h2>About Us</h2>
+    <p>Yeh About page ka content hai.</p>
+  </div>
+
+  <div id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Yeh Contact page ka content hai.</p>
+  </div>
+
+  <script>
+    function show(id) {
+      // Sab sections ko hide karo
+      let sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      // Jo section chahiye usay show karo
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html> 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summer Camp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #333;
+      text-align: center;
+    }
+
+    nav button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 20px;
+      margin: 10px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: none; /* hidden by default */
+    }
+
+    #home {
+      display: block; /* show by default */
+    }
+
+    .camp-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .camp-list li {
+      background-color: #e7f7e7;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Our Summer Camp</h1>
+    <p>Join us for an unforgettable summer experience!</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('home')">Programs</button>
+    <button onclick="showSection('campers')">All Campers</button>
+  </nav>
+
+  <section id="home">
+    <h2>Our Programs</h2>
+    <p>We offer a variety of activities including:</p>
+    <ul>
+      <li>Outdoor Adventures</li>
+      <li>Creative Arts</li>
+      <li>Sports & Games</li>
+      <li>STEM Workshops</li>
+    </ul>
+  </section>
+
+  <section id="campers">
+    <h2>ALL Campers</h2>
+    <ul class="camp-list">
+      <li>Ali Khan</li>
+      <li>Fatima Zahra</li>
+      <li>Ahmed Raza</li>
+      <li>Maria Noor</li>
+      <li>Usman Tariq</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Summer Camp. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      var sections = document.getElementsByTagName("section");
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+      }
+
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+
+</body>
+</html> -->

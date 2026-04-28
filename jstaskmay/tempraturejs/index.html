@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Weather</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background-color: #eef2f3;
+      padding: 20px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      width: 130px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter Weather  (snowy , cloudy , sunny, rainy)</h2>
+  <input type="text" id="weather">
+  <button onclick="showWeather()">Show</button>
+
+  <div id="result"></div>
+
+  <script>
+    function showWeather() {
+      let w = document.getElementById("weather").value.toLowerCase();
+      let result = document.getElementById("result");
+      let icon = "";
+      let temp = "";
+
+      if (w == "sunny") {
+        icon = "☀️";
+        temp = "30°C / 20°C";
+      } else if (w == "rainy") {
+        icon = "🌧️";
+        temp = "25°C / 18°C";
+      } else if (w == "cloudy") {
+        icon = "⛅";
+        temp = "28°C / 19°C";
+      } else if (w == "snowy") {
+        icon = "❄️";
+        temp = "0°C / -5°C";
+      } else {
+        result.innerHTML = "<p style='color:red;'>Please enter valid weather (sunny, rainy, etc.)</p>";
+        return;
+      }
+
+      // Show cards (manual 7 times)
+      result.innerHTML =
+        "<div class='card'>Mon<br>" + icon + "<br>" + temp + "</div>" +
+        "<div class='card'>Tue<br>" + icon + "<br>" + temp + "</div>" +
+        "<div class='card'>Wed<br>" + icon + "<br>" + temp + "</div>" +
+        "<div class='card'>Thu<br>" + icon + "<br>" + temp + "</div>" +
+        "<div class='card'>Fri<br>" + icon + "<br>" + temp + "</div>" +
+        "<div class='card'>Sat<br>" + icon + "<br>" + temp + "</div>" +
+        "<div class='card'>Sun<br>" + icon + "<br>" + temp + "</div>";
+    }
+  </script>
+
+</body>
+</html>
